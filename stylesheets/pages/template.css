@@ -5,19 +5,28 @@ body {
   line-height: 120%;
   /* 폰트 사이즈가 바뀐다면 line-height도 그 때 같이 바꿔줘야함!!! */
   /* 안 그러면 큰 폰트, 작은 폰트에 상관없이 14.4px이 유지되어버림...  */
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 /* ---------------------------------------------- */
 /* 헤더                                            */
 /* ---------------------------------------------- */
-header {
+.header {
+  width: 1920px;
+  height: 117px;
+  border-bottom: 1px solid var(--color-gray-100);
+  display: flex;
+  justify-content: center;
+}
+
+.header__inner {
   width: 1020px;
   height: 116px;
-  border-bottom: 1px solid var(--color-gray-100);
+  left: 570px;
 }
+
 .sr-only {
   position: absolute;
   overflow: hidden;
@@ -30,23 +39,32 @@ header {
   height: 116px;
   border: none;
   background-color: var(--color-blue-600);
-  background-image: url(/assets/icon/hamburger.svg);
-  background-repeat: no-repeat;
-  background-position: 40px 30px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   color: var(--color-white);
 }
 
 .button--category span {
-  margin-top: 72px;
+  margin-top: 12px;
+}
+
+.button--category:focus-visible {
+  outline: none;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 1px var(--color-red-500) inset;
 }
 
 /* ---------------------------------------------- */
 /* 내비게이션                                        */
 /* ---------------------------------------------- */
 .navigation {
+  width: 540px;
+  height: 500px;
   margin: 0px;
+  position: relative;
+  left: 450px;
 }
 
 h2 {
@@ -72,20 +90,109 @@ ul {
 }
 
 .navigation__list i {
-  margin-left: 24px;
+  margin-left: 20px;
   margin-right: 4px;
 }
 
-.navigation__list li {
+.theme-new {
+  margin-left: 4px;
+}
+
+li {
   width: 170px;
   height: 30px;
   display: flex;
   align-items: center;
+  vertical-align: middle;
 }
 
 .navigation__list li:first-child {
   margin-top: 10px;
 }
+
+.two-depth,
+.three-depth {
+  position: absolute;
+  top: 0px;
+  left: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.two-depth > li,
+.three-depth > li {
+  margin-left: 25px;
+}
+
+/* .is--active {
+  visibility: visible;
+}
+
+.one-depth,
+.two-depth,
+.three-depth {
+  visibility: hidden;
+}
+
+.one-depth-link:hover .two-depth,
+.two-depth-link:hover .three-depth {
+  visibility: visible;
+}
+
+.three-depth-link:hover .three.depth-link:focus {
+  font-weight: 700;
+  color: var(--color-blue-600);
+}
+
+.button--category:hover .one-depth,
+.button--category:focus .one-depth {
+  visibility: visible;
+} */
+
+/* .navigation,
+.three-depth,
+.two-depth {
+  visibility: hidden;
+} */
+
+/* 📌다른 코드
+ .is--active {
+  visibility: visible;
+}
+
+.one-depth-link:hover .two-depth {
+  visibility: visible;
+}
+
+.two-depth-link:hover .three-depth {
+  visibility: visible;
+}
+
+.three-depth-link:hover {
+  font-weight: 700;
+  color: var(--color-blue-600);
+}
+
+.three-depth-link:focus {
+  font-weight: 700;
+  color: var(--color-blue-600);
+}
+
+.one-depth-link,
+.two-depth-link {
+  display: block;
+  width: 150px;
+}
+
+.navigation__list a.is--active {
+  background: url("/assets/icon/more-right-active.svg") right no-repeat;
+  background-position: 130px 2px;
+  color: var(--color-blue-600);
+  font-weight: 700;
+} */
+
 /* ---------------------------------------------- */
 /* 메인 콘텐츠                                       */
 /* ---------------------------------------------- */
