@@ -84,6 +84,7 @@ ul {
 }
 
 .navigation__list {
+  position: relative;
   width: 180px;
   height: 500px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -126,14 +127,15 @@ li {
   margin-left: 25px;
 }
 
-/* .is--active {
-  visibility: visible;
+/* 📌📌📌Active:내가 따라한 코드 */
+.navigation,
+.three-depth,
+.two-depth {
+  visibility: hidden;
 }
 
-.one-depth,
-.two-depth,
-.three-depth {
-  visibility: hidden;
+.is--active {
+  visibility: visible;
 }
 
 .one-depth-link:hover .two-depth,
@@ -146,38 +148,11 @@ li {
   color: var(--color-blue-600);
 }
 
-.button--category:hover .one-depth,
-.button--category:focus .one-depth {
-  visibility: visible;
-} */
-
-/* .navigation,
-.three-depth,
-.two-depth {
-  visibility: hidden;
-} */
-
-/* 📌다른 코드
- .is--active {
-  visibility: visible;
-}
-
-.one-depth-link:hover .two-depth {
-  visibility: visible;
-}
-
-.two-depth-link:hover .three-depth {
-  visibility: visible;
-}
-
-.three-depth-link:hover {
-  font-weight: 700;
+.navigation__list a.is--active {
+  background: url("/assets/icon/more-right-active.svg") right no-repeat;
+  background-position: 130px 2px;
   color: var(--color-blue-600);
-}
-
-.three-depth-link:focus {
   font-weight: 700;
-  color: var(--color-blue-600);
 }
 
 .one-depth-link,
@@ -185,13 +160,6 @@ li {
   display: block;
   width: 150px;
 }
-
-.navigation__list a.is--active {
-  background: url("/assets/icon/more-right-active.svg") right no-repeat;
-  background-position: 130px 2px;
-  color: var(--color-blue-600);
-  font-weight: 700;
-} */
 
 /* ---------------------------------------------- */
 /* 메인 콘텐츠                                       */
