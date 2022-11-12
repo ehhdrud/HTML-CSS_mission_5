@@ -1,0 +1,245 @@
+body {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  /* 폰트 사이즈가 바뀐다면 line-height도 그 때 같이 바꿔줘야함!!! */
+  /* 안 그러면 큰 폰트, 작은 폰트에 상관없이 14.4px이 유지되어버림...  */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* ---------------------------------------------- */
+/* 헤더                                            */
+/* ---------------------------------------------- */
+header {
+  width: 1020px;
+  height: 116px;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+.button--category {
+  width: 110px;
+  height: 116px;
+  border: none;
+  background-color: var(--color-blue-600);
+  background-image: url(/assets/icon/hamburger.svg);
+  background-repeat: no-repeat;
+  background-position: 40px 30px;
+  display: flex;
+  justify-content: center;
+  color: var(--color-white);
+}
+
+.button--category span {
+  margin-top: 72px;
+}
+
+/* ---------------------------------------------- */
+/* 내비게이션                                        */
+/* ---------------------------------------------- */
+.navigation {
+  margin: 0px;
+}
+
+h2 {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+ul {
+  padding-left: 0px;
+  margin: 0px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation__list {
+  width: 180px;
+  height: 500px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.navigation__list i {
+  margin-left: 24px;
+  margin-right: 4px;
+}
+
+.navigation__list li {
+  width: 170px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.navigation__list li:first-child {
+  margin-top: 10px;
+}
+/* ---------------------------------------------- */
+/* 메인 콘텐츠                                       */
+/* ---------------------------------------------- */
+/* 메인 콘텐츠 영역의 최소 높이 설정 */
+.main {
+  min-height: 52rem;
+}
+
+/* ---------------------------------------------- */
+/* 푸터                                            */
+/* ---------------------------------------------- */
+
+.footer {
+  width: 1920px;
+  height: 349px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 👇👇👇Guide */
+
+.guide-background {
+  width: 1920px;
+  height: 40px;
+  background-color: var(--color-gray-200);
+  display: flex;
+}
+
+.guide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px auto 2px auto;
+  color: var(--color-gray-800);
+}
+
+.guide-txt {
+  padding: 5px 14px 6px 14px;
+}
+
+.personal-information {
+  font-weight: 700;
+}
+
+/* 👇👇👇Information */
+
+.information-background {
+  width: 1920px;
+  height: 207px;
+}
+
+.information {
+  width: 1200px;
+  height: 143px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 32px auto;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--color-gray-800);
+}
+
+.information-1 div {
+  margin-bottom: 12px;
+}
+
+.information-1 div:last-child {
+  margin-bottom: 0px;
+}
+
+.customer {
+  display: flex;
+}
+
+.customer div:first-child {
+  width: 102px;
+  font-weight: 700;
+  border-right: 1px solid var(--color-gray-800);
+  margin-right: 15px;
+}
+
+.tel {
+  font-size: 48px;
+  line-height: 120%;
+  font-weight: 700;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.address {
+  margin-bottom: 8px;
+}
+
+.information-3 {
+  width: 282px;
+  height: 84px;
+}
+
+.information-3 div:first-child {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* 👇👇👇Copyright,SNS */
+.copyright-and-sns-background {
+  width: 1920px;
+  height: 102px;
+  background-color: var(--color-gray-900);
+  color: var(--color-gray-200);
+}
+
+.copyright-and-sns {
+  margin: 16px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+}
+
+.sns {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 36px;
+}
+
+.sns div:nth-child(1) {
+  margin-left: 50px;
+}
+
+.sns div:nth-child(2) {
+  margin-left: 10px;
+}
+
+.sns div:nth-child(3) {
+  margin-left: 10px;
+}
+
+.instagram {
+  background: radial-gradient(
+      circle farthest-corner at 32% 106%,
+      #ffe17d 0%,
+      #ffcd69 10%,
+      #fa9137 28%,
+      #eb4141 42%,
+      transparent 82%
+    ),
+    linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
+  border-radius: 50%;
+}
