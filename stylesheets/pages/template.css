@@ -146,17 +146,34 @@ li {
 
 /* 👇👇👇Active */
 .navigation,
-.three-depth,
-.two-depth {
+.two-depth,
+.three-depth {
   visibility: hidden;
 }
+/* 주의:`is--active{visibility: visible;}` 뒤에 위치하면 is--active 클래스가 정상동작하지 않음!!! */
 
 .is--active {
   visibility: visible;
 }
 
-.one-depth-link:hover .two-depth,
-.two-depth-link:hover .three-depth {
+a.is--active {
+  background: url("/assets/icon/more-right-active.svg") right no-repeat;
+  background-position: 130px 2px;
+  color: var(--color-blue-600);
+  font-weight: 700;
+}
+
+.one-depth-link:focus,
+.two-depth-link:focus {
+  background: url("/assets/icon/more-right-active.svg") right no-repeat;
+  background-position: 130px 2px;
+  color: var(--color-blue-600);
+  font-weight: 700;
+}
+
+.one-depth-link:focus ~ .two-depth,
+.two-depth-link:focus ~ .three-depth {
+  /* font-weight: 100; */
   visibility: visible;
 }
 
@@ -164,13 +181,6 @@ li {
 .three-depth-link:focus {
   font-weight: 700;
   color: var(--color-blue-600);
-}
-
-.navigation__list a.is--active {
-  background: url("/assets/icon/more-right-active.svg") right no-repeat;
-  background-position: 130px 2px;
-  color: var(--color-blue-600);
-  font-weight: 700;
 }
 
 .one-depth-link,
@@ -325,14 +335,14 @@ li {
 }
 
 .instagram {
-  background: radial-gradient(
-      circle farthest-corner at 32% 106%,
-      #ffe17d 0%,
-      #ffcd69 10%,
-      #fa9137 28%,
-      #eb4141 42%,
-      transparent 82%
-    ),
-    linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
+  background: linear-gradient(
+    174.12deg,
+    #3928eb 2.08%,
+    #bc1888 20.31%,
+    #cc2366 35.42%,
+    #dc2743 52.6%,
+    #e6683c 76.04%,
+    #f09433 96.35%
+  );
   border-radius: 50%;
 }
