@@ -120,6 +120,17 @@ li {
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  width: 180px;
+  height: 500px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.two-depth {
+  z-index: 1;
+}
+
+.three-depth {
+  z-index: 2;
 }
 
 .two-depth > li,
@@ -127,12 +138,22 @@ li {
   margin-left: 25px;
 }
 
-/* 📌📌📌Active:내가 따라한 코드 */
-.navigation,
+.two-depth::before,
+.three-depth::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 10px;
+  height: 500px;
+  background-color: var(--color-white);
+}
+
+/* 📌📌📌Active 영역 */
+/* .navigation,
 .three-depth,
 .two-depth {
   visibility: hidden;
-}
+} */
 
 .is--active {
   visibility: visible;
@@ -143,7 +164,8 @@ li {
   visibility: visible;
 }
 
-.three-depth-link:hover .three.depth-link:focus {
+.three-depth-link:hover,
+.three-depth-link:focus {
   font-weight: 700;
   color: var(--color-blue-600);
 }
