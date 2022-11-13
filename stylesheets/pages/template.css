@@ -5,10 +5,6 @@ body {
   line-height: 120%;
   /* 폰트 사이즈가 바뀐다면 line-height도 그 때 같이 바꿔줘야함!!! */
   /* 안 그러면 큰 폰트, 작은 폰트에 상관없이 14.4px이 유지되어버림...  */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 }
 /* ---------------------------------------------- */
 /* 헤더                                            */
@@ -148,12 +144,12 @@ li {
   background-color: var(--color-white);
 }
 
-/* 📌📌📌Active 영역 */
-/* .navigation,
+/* 👇👇👇Active */
+.navigation,
 .three-depth,
 .two-depth {
   visibility: hidden;
-} */
+}
 
 .is--active {
   visibility: visible;
