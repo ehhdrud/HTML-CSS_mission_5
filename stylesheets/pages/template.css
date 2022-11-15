@@ -10,17 +10,16 @@ body {
 /* 헤더                                            */
 /* ---------------------------------------------- */
 .header {
+  display: flex;
+  justify-content: center;
   width: 1920px;
   height: 117px;
   border-bottom: 1px solid var(--color-gray-100);
-  display: flex;
-  justify-content: center;
 }
 
 .header__inner {
   width: 1020px;
   height: 116px;
-  left: 570px;
 }
 
 .sr-only {
@@ -31,14 +30,14 @@ body {
 }
 
 .button--category {
-  width: 110px;
-  height: 116px;
-  border: none;
-  background-color: var(--color-blue-600);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 110px;
+  height: 116px;
+  border: none;
+  background-color: var(--color-blue-600);
   color: var(--color-white);
 }
 
@@ -56,11 +55,11 @@ body {
 /* 내비게이션                                        */
 /* ---------------------------------------------- */
 .navigation {
+  position: relative;
+  left: 450px;
   width: 540px;
   height: 500px;
   margin: 0px;
-  position: relative;
-  left: 450px;
 }
 
 h2 {
@@ -71,12 +70,12 @@ h2 {
 }
 
 ul {
-  padding-left: 0px;
-  margin: 0px;
-  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px;
 }
 
 .navigation__list {
@@ -96,10 +95,10 @@ i {
 }
 
 li {
-  width: 170px;
-  height: 30px;
   display: flex;
   align-items: center;
+  width: 170px;
+  height: 30px;
 }
 
 .navigation__list li:first-child {
@@ -108,13 +107,13 @@ li {
 
 .two-depth,
 .three-depth {
-  position: absolute;
-  top: 0px;
-  left: 180px;
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 180px;
   width: 180px;
   height: 500px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -126,12 +125,12 @@ li {
 
 .two-depth::before,
 .three-depth::before {
-  content: "";
   position: absolute;
   left: 0px;
   width: 3px;
   height: 500px;
   background-color: var(--color-white);
+  content: "";
 }
 
 /* 👇👇👇Active */
@@ -168,8 +167,8 @@ a.is--active {
 
 .three-depth-link:hover,
 .three-depth-link:focus {
-  font-weight: 700;
   color: var(--color-blue-600);
+  font-weight: 700;
 }
 
 .one-depth-link,
@@ -191,22 +190,22 @@ a.is--active {
 /* ---------------------------------------------- */
 
 .footer {
-  width: 1920px;
-  height: 349px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 1920px;
+  height: 349px;
 }
 
 /* 👇👇👇Guide */
 
 .guide-background {
+  display: flex;
+  /* .guide-background의 세로를 플렉스 아이템인 .guide로 채움! */
   width: 1920px;
   height: 40px;
   background-color: var(--color-gray-200);
-  display: flex;
-  /* `display: flex;`를 사용해 .guide-background의 세로를 플렉스 아이템인 .guide로 채움! */
 }
 
 .guide {
@@ -238,15 +237,15 @@ a.is--active {
 }
 
 .information {
-  width: 1200px;
-  height: 143px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  width: 1200px;
+  height: 143px;
   margin: 32px auto;
+  color: var(--color-gray-800);
   font-size: 16px;
   line-height: 120%;
-  color: var(--color-gray-800);
 }
 
 .information-1 div {
@@ -278,11 +277,11 @@ a.is--active {
 }
 
 .tel {
-  font-size: 48px;
-  line-height: 120%;
-  font-weight: 700;
   margin-top: 8px;
   margin-bottom: 12px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 120%;
 }
 
 .address {
@@ -295,8 +294,8 @@ a.is--active {
 }
 
 .information-3 div:first-child {
-  font-weight: 700;
   margin-bottom: 8px;
+  font-weight: 700;
 }
 
 /* 👇👇👇Copyright,SNS */
@@ -308,16 +307,16 @@ a.is--active {
 }
 
 .copyright-and-sns {
-  margin: 16px auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 16px auto;
 }
 
 .copyright {
-  font-weight: 300;
   display: flex;
   flex-direction: column;
+  font-weight: 300;
 }
 
 .sns {
